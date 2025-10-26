@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Creative Frontend Foundations - Cohort Launch</title>
+  <meta name="description" content="Launch your portfolio-ready frontend skills in 6 weeks. Mentor-led cohort, hands-on projects, and a supportive community.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            midnight: '#0f172a',
+            saffron: '#f5a524',
+            terracotta: '#db5a42',
+            sky: '#3aa0f4',
+            sand: '#f8f5f2'
+          },
+          boxShadow: {
+            soft: '0 8px 24px rgba(15, 23, 42, 0.12)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="bg-sand text-midnight antialiased selection:bg-saffron selection:text-midnight">
+  <a href="#main" class="skip-link sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:bg-white focus:text-midnight focus:px-3 focus:py-2 focus:rounded-md focus:shadow">Skip to content</a>
+
+  <header class="sticky top-0 z-40 backdrop-blur bg-sand/80 border-b border-black/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span aria-hidden="true" class="inline-block w-7 h-7 rounded-sm bg-midnight"></span>
+        <span class="font-semibold tracking-tight">Creative Frontend Foundations</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#instructor" class="hover:text-terracotta focus:outline-none focus:ring-2 focus:ring-saffron rounded-sm">Instructor</a>
+        <a href="#curriculum" class="hover:text-terracotta focus:outline-none focus:ring-2 focus:ring-saffron rounded-sm">Curriculum</a>
+        <a href="#timeline" class="hover:text-terracotta focus:outline-none focus:ring-2 focus:ring-saffron rounded-sm">Timeline</a>
+        <a href="#testimonials" class="hover:text-terracotta focus:outline-none focus:ring-2 focus:ring-saffron rounded-sm">Stories</a>
+        <a href="#pricing" class="hover:text-terracotta focus:outline-none focus:ring-2 focus:ring-saffron rounded-sm">Pricing</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="#pricing" class="btn-primary whitespace-nowrap">Reserve your spot</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="relative min-h-[92vh] flex items-end pt-10">
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div class="absolute -top-10 -left-10 w-48 h-48 rounded-xl bg-saffron mix-blend-multiply opacity-80 rotate-6"></div>
+        <div class="absolute top-20 -right-12 w-64 h-64 rounded-xl bg-sky mix-blend-multiply opacity-80 -rotate-6"></div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full bg-terracotta/10 blur-3xl"></div>
+      </div>
+      <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <p class="text-sm uppercase tracking-widest font-medium text-midnight/70 mb-6">Cohort-based course</p>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] mb-6">
+            Build delightful frontends with confidence and ship a portfolio that lands interviews.
+          </h1>
+          <p class="text-lg sm:text-xl text-midnight/80 max-w-2xl">
+            Six weeks of hands-on projects, design-thinking, and real feedback. Learn workflows used by modern product teams and craft a job-ready portfolio.
+          </p>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a href="#pricing" class="btn-primary whitespace-nowrap">See pricing</a>
+            <a href="#curriculum" class="btn-secondary whitespace-nowrap">Explore curriculum</a>
+            <span class="chip bg-white">Next cohort: <strong class="ml-1 font-semibold" id="nextCohortLabel">Jan 15</strong></span>
+          </div>
+          <div class="mt-8 flex flex-wrap gap-4 text-sm text-midnight/70">
+            <span class="chip">6 weeks</span>
+            <span class="chip">Live mentor sessions</span>
+            <span class="chip">Capstone project</span>
+            <span class="chip">Career support</span>
+          </div>
+          <form id="heroWaitlist" class="mt-8 p-3 bg-white rounded-lg shadow-soft max-w-lg" aria-labelledby="waitlistLabel">
+            <div class="flex flex-col sm:flex-row gap-3 items-stretch">
+              <label class="sr-only" id="waitlistLabel" for="waitlistEmail">Join the waitlist</label>
+              <input type="email" id="waitlistEmail" name="email" autocomplete="email" placeholder="Your email" class="input" required>
+              <select id="waitlistRole" class="input">
+                <option value="">Your role</option>
+                <option>Student</option>
+                <option>Career switcher</option>
+                <option>Junior developer</option>
+                <option>Designer</option>
+              </select>
+              <button type="submit" class="btn-primary whitespace-nowrap">Join</button>
+            </div>
+            <p id="waitlistMsg" class="mt-2 text-sm text-midnight/70 hidden">Welcome aboard. We saved your spot.</p>
+          </form>
+        </div>
+      </div>
+      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-center text-xs text-midnight/60" aria-hidden="true">
+        <span class="inline-block animate-bounce">Scroll</span>
+      </div>
+    </section>
+
+    <section id="instructor" class="section">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-[2fr_1fr] gap-10 items-start">
+          <div>
+            <h2 class="eyebrow">Instructor</h2>
+            <h3 class="h2 mt-2">Meet your mentor</h3>
+            <p class="mt-4 text-lg text-midnight/80">I am Aria Patel, a product engineer and educator who has shipped interfaces for millions of users. I have led frontend teams, built design systems, and coached developers into their first roles. This course distills the workflows that make teams effective: accessibility-first components, design sense, DX tooling, and communication.</p>
+            <ul class="mt-6 grid sm:grid-cols-3 gap-4">
+              <li class="fact">
+                <span class="fact-number">10+</span>
+                <span class="fact-label">years building products</span>
+              </li>
+              <li class="fact">
+                <span class="fact-number">30k</span>
+                <span class="fact-label">students taught</span>
+              </li>
+              <li class="fact">
+                <span class="fact-number">100%</span>
+                <span class="fact-label">project based</span>
+              </li>
+            </ul>
+          </div>
+          <aside class="bg-white rounded-xl p-6 shadow-soft border border-black/5">
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-lg bg-sky/20 flex items-center justify-center text-midnight font-bold">AP</div>
+              <div>
+                <p class="font-semibold">Aria Patel</p>
+                <p class="text-sm text-midnight/70">Product Engineer, Mentor</p>
+              </div>
+            </div>
+            <p class="mt-4 text-sm text-midnight/80">Previously at StudioFlux, PixelCraft, and (contract) with growth-stage startups. Loves craft coffee and small delightful UX.
+            </p>
+            <div class="mt-4 flex gap-3">
+              <a href="#curriculum" class="btn-secondary">View syllabus</a>
+              <a href="#pricing" class="btn-primary">Apply now</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="curriculum" class="section">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="eyebrow">Curriculum</h2>
+        <div class="flex items-end justify-between gap-4">
+          <h3 class="h2">What you will build</h3>
+          <div class="flex gap-2">
+            <button class="btn-secondary" id="expandAll">Expand all</button>
+            <button class="btn-secondary" id="collapseAll">Collapse all</button>
+          </div>
+        </div>
+        <div id="curriculumList" class="mt-6 space-y-3" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="timeline" class="section bg-white/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-10 items-start">
+          <div class="flex-1">
+            <h2 class="eyebrow">Cohorts</h2>
+            <h3 class="h2">Your six-week journey</h3>
+            <p class="mt-3 text-midnight/80">Pick a start date that works. We run small groups for real feedback and momentum.</p>
+            <div class="mt-4 flex flex-wrap gap-3 items-center">
+              <label for="cohortSelect" class="text-sm font-medium">Choose a cohort</label>
+              <select id="cohortSelect" class="input w-full sm:w-auto"></select>
+              <a id="icsKickoff" href="#" download="cohort-kickoff.ics" class="btn-secondary whitespace-nowrap">Add kickoff to calendar</a>
+            </div>
+            <ol id="timelineList" class="relative mt-8 space-y-6" aria-live="polite"></ol>
+          </div>
+          <aside class="w-full lg:w-[28rem] bg-white rounded-xl p-6 shadow-soft border border-black/5">
+            <h4 class="font-semibold text-lg">What to expect</h4>
+            <ul class="mt-4 space-y-2 text-sm text-midnight/80">
+              <li>2x live mentor sessions per week</li>
+              <li>Hands-on labs and feedback loops</li>
+              <li>Peer reviews and demo day</li>
+              <li>Career support office hours</li>
+            </ul>
+            <div class="mt-5 p-4 rounded-lg bg-sky/10">
+              <p class="text-sm"><span class="font-semibold">Tip:</span> We cap cohorts for tight feedback. If a date is full you can join the waitlist.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="eyebrow">Stories</h2>
+        <div class="flex items-end justify-between">
+          <h3 class="h2">Alumni outcomes</h3>
+          <div class="flex gap-2" role="group" aria-label="testimonial controls">
+            <button id="prevTestimonial" class="btn-secondary" aria-label="previous testimonials">Prev</button>
+            <button id="nextTestimonial" class="btn-secondary" aria-label="next testimonials">Next</button>
+          </div>
+        </div>
+        <div class="mt-6 overflow-hidden">
+          <div id="testimonialTrack" class="flex gap-4 will-change-transform"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="eyebrow">Pricing</h2>
+        <div class="flex items-end justify-between gap-4">
+          <h3 class="h2">Pick your path</h3>
+          <div class="flex items-center gap-2 text-sm">
+            <span>Pay once</span>
+            <label class="switch">
+              <input type="checkbox" id="billingToggle" aria-label="Toggle monthly billing">
+              <span class="slider"></span>
+            </label>
+            <span>Split monthly</span>
+          </div>
+        </div>
+        <div id="pricingGrid" class="mt-8 grid md:grid-cols-3 gap-6"></div>
+        <p class="mt-4 text-xs text-midnight/60">Taxes may apply. 7-day refund window. Scholarships available.</p>
+      </div>
+    </section>
+
+    <footer class="pt-12 pb-16 border-t border-black/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div>
+            <p class="font-semibold">Creative Frontend Foundations</p>
+            <p class="text-sm text-midnight/70 mt-1">A hands-on, mentor-led cohort to help you build and ship better interfaces.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <a href="#curriculum" class="btn-secondary">Syllabus</a>
+            <a href="#pricing" class="btn-primary">Apply now</a>
+          </div>
+        </div>
+        <p class="mt-6 text-xs text-midnight/60">Built for accessibility and modern browsers. Respecting prefers-reduced-motion setting.</p>
+      </div>
+    </footer>
+  </main>
+
+  <div id="modal" class="fixed inset-0 bg-black/40 hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="w-full max-w-md bg-white rounded-xl shadow-soft p-6">
+      <div class="flex items-start justify-between">
+        <div>
+          <h3 id="modalTitle" class="font-semibold text-lg">Reserve your spot</h3>
+          <p id="modalSubtitle" class="text-sm text-midnight/70">Complete the form and we will email your next steps.</p>
+        </div>
+        <button id="closeModal" class="btn-icon" aria-label="Close dialog">✕</button>
+      </div>
+      <form id="checkoutForm" class="mt-4 space-y-3">
+        <div>
+          <label for="checkoutPlan" class="label">Selected plan</label>
+          <input id="checkoutPlan" class="input" readonly>
+        </div>
+        <div>
+          <label for="checkoutEmail" class="label">Email</label>
+          <input type="email" id="checkoutEmail" class="input" required placeholder="you@example.com">
+        </div>
+        <div>
+          <label for="checkoutName" class="label">Full name</label>
+          <input id="checkoutName" class="input" required placeholder="Your name">
+        </div>
+        <div class="flex items-center gap-2">
+          <input id="tos" type="checkbox" required class="h-4 w-4">
+          <label for="tos" class="text-sm">I agree to the terms</label>
+        </div>
+        <div class="flex items-center gap-3 pt-2">
+          <button type="submit" class="btn-primary">Save my seat</button>
+          <button type="button" id="cancelCheckout" class="btn-secondary">Cancel</button>
+        </div>
+        <p id="checkoutMsg" class="text-sm text-midnight/80 hidden">Thanks. We emailed your next steps.</p>
+      </form>
+    </div>
+  </div>
+
+  <style type="text/tailwindcss" data-teda="tailwind-apply">
+    @layer components {
+      .section { @apply py-16 sm:py-20; }
+      .eyebrow { @apply text-xs uppercase tracking-[0.2em] text-midnight/60 font-semibold; }
+      .h2 { @apply text-3xl sm:text-4xl font-extrabold; }
+      .btn-primary { @apply inline-flex items-center justify-center px-4 py-2 rounded-md bg-midnight text-white text-sm font-semibold shadow hover:shadow-md hover:bg-black focus:outline-none focus:ring-2 focus:ring-saffron transition; }
+      .btn-secondary { @apply inline-flex items-center justify-center px-4 py-2 rounded-md border border-black/10 bg-white text-midnight text-sm font-semibold hover:bg-sand focus:outline-none focus:ring-2 focus:ring-saffron transition; }
+      .btn-icon { @apply inline-flex items-center justify-center w-8 h-8 rounded-md border border-black/10 text-midnight hover:bg-sand focus:outline-none focus:ring-2 focus:ring-saffron; }
+      .input { @apply w-full px-3 py-2 rounded-md border border-black/10 bg-white text-midnight placeholder:text-midnight/50 focus:outline-none focus:ring-2 focus:ring-saffron; }
+      .label { @apply block text-sm font-medium mb-1; }
+      .chip { @apply inline-flex items-center gap-2 text-xs px-2.5 py-1 rounded-full border border-black/10 bg-white; }
+      .fact { @apply p-4 rounded-lg bg-white border border-black/5 shadow-sm; }
+      .fact-number { @apply text-2xl font-extrabold; }
+      .fact-label { @apply text-xs text-midnight/70; }
+      .card { @apply rounded-xl bg-white border border-black/5 shadow-soft; }
+      .switch { @apply relative inline-block w-12 h-6; }
+      .switch input { @apply sr-only; }
+      .switch .slider { @apply absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-sand border border-black/10 rounded-full transition; }
+      .switch .slider::before { content: ''; @apply absolute h-5 w-5 left-0.5 top-0.5 bg-midnight rounded-full transition; }
+      .switch input:checked + .slider { @apply bg-saffron; }
+      .switch input:checked + .slider::before { @apply translate-x-6; }
+      .accordion-item { @apply card overflow-hidden; }
+      .accordion-header { @apply w-full text-left px-4 py-3 flex items-center justify-between font-semibold hover:bg-sand focus:outline-none focus:ring-2 focus:ring-saffron; }
+      .accordion-panel { @apply px-4 pb-4 text-sm text-midnight/80 hidden; }
+      .badge { @apply inline-flex items-center text-[10px] uppercase tracking-wide px-2 py-0.5 rounded-full bg-sky/15 text-midnight border border-sky/30; }
+      .price { @apply text-4xl font-extrabold; }
+      .price-note { @apply text-xs text-midnight/70; }
+      .feature { @apply flex items-start gap-2 text-sm; }
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="scripts/helpers.js"></script>
+  <script src="scripts/ui.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
